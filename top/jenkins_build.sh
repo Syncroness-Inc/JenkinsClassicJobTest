@@ -6,6 +6,7 @@
 MASTER_COUNT=`git rev-list --count origin/master`
 DEVELOP_COUNT=`git rev-list --count origin/develop`
 BLDNUM=$((MASTER_COUNT + DEVELOP_COUNT))
+echo "BuildNumber=$BLDNUM" > build_number_$BLDNUM.txt
 
 # Turn on auto-exit-on-error
 set -e
