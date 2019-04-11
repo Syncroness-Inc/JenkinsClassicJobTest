@@ -15,7 +15,7 @@ set -e
 python3 -m pytest --cov src -v --junitxml junit.xml --cov-report xml tests
 
 # Perform the type checking
-python3 -m mypy--config-file top/mypy.ini src
-
+python3 -m mypy --config-file top/mypy.ini src
+			    
 # Run the linter
 python3 -m pyline --rcfile=top/pylint.conf src
