@@ -11,15 +11,21 @@ a line by itself, preferably preceded by a blank line.
 from __future__ import division, absolute_import, print_function
 
 
-def foobar(num_to_inc: int, increment: bool = False) ->str:
+def foobar(num_to_inc: int, increment: bool = False) -> str:
     r"""A one-line summary that does not use variable names or the
     function name.
-
-    Several sentences providing an extended description. Refer to
-    variables using back-ticks, e.g. `var`.
+    
+    Several sentences providing an extended description.  Refer to
+    variables using back-ticks, e.g.  `var`.
     """
 
     if increment:
-        num_to_inc += 1
+        num_to_inc += 1     
 
-    return "result=" + str(num_to_inc)
+    return "result=" + str(num_to_inc) 
+
+def morefoo(i: int) -> int:
+    """ This is more testing of mypy
+    """
+
+    return i * i

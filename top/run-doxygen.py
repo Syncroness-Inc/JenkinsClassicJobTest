@@ -41,7 +41,7 @@ def filter_warnings( output ):
 print( "Running doxygen..." )    
 
 # run doxygen
-cmd = "doxygen"
+cmd = "doxygen.exe"
 p   = subprocess.Popen( cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE )
 r   = p.communicate()
 if ( p.returncode != 0 ):
