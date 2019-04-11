@@ -14,9 +14,8 @@ echo BuildNumber=$BLDNUM > build_number_$BLDNUM.txt
 
 # tag my GIT build
 if [ "$1" == "git" ]; then
+  echo debugging >tmp.txt
   source ~/credentials.sh
-  echo "source status: $?."
-  cat ~/credentials.sh | grep GIT
   whoami
   echo user=$GITHUB_USERNAME
   BRANCHNAME=$2
