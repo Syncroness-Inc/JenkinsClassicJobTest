@@ -14,8 +14,9 @@ echo BuildNumber=$BLDNUM > build_number_$BLDNUM.txt
 
 # tag my GIT build
 if [ "$1" == "git" ]; then
+  whoami
   . ~/.bashrc
-  echo $GITHUB_USERNAME
+  echo user=$GITHUB_USERNAME
   BRANCHNAME=$2
   export GIT_ASKPASS="top/git-credential-helper.sh"
   TAG=$BRANCHNAME-bldnum-$BLDNUM
