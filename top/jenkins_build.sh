@@ -14,6 +14,7 @@ echo BuildNumber=$BLDNUM > build_number_$BLDNUM.txt
 
 # tag my GIT build
 if [ "$1" == "git" ]; then
+  source /etc/bash.bashrc
   whoami
   echo user=$GITHUB_USERNAME
   BRANCHNAME=$2
