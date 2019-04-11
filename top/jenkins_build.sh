@@ -14,9 +14,9 @@ echo BuildNumber=$BLDNUM > build_number_$BLDNUM.txt
 
 # tag my GIT build
 if [ "$1" == "git" ]; then
-  source /etc/bash.bashrc
+  source ~/credentials.sh
   echo "source status: $?."
-  cat /etc/bash.bashrc | grep GIT
+  cat ~/credentials.sh | grep GIT
   whoami
   echo user=$GITHUB_USERNAME
   BRANCHNAME=$2
@@ -29,6 +29,7 @@ if [ "$1" == "git" ]; then
     git tag -d $TAG
     git tag $TAG
   fi
+  set -e
   git push origin $TAG
 fi
 
